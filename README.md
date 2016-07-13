@@ -1,4 +1,4 @@
-REDAXO-AddOn:  lus_rex_cleverreach
+REDAXO-AddOn:  lus_cleverreach
 ==================================
 
 REDAXO 4 Addon für cleverreach Anbindung
@@ -21,10 +21,12 @@ Verwendung
 Parameter
 ----------
 
-	 - `emailfeld` - gibt das Feld im Formular an, das die E-Mail-Adresse enthält.
-	 - `0/1/actionfeld`	- Hier wird die durchzuführende Aktion gewählt ( 0 = Abmelden, 1 = Anmelden) 
-	    bzw. ein Feld im Formular angegeben, das die entsprechenden Werte liefert, also z.B. ein Radio Feld zur Auswahl durch den Benutzer.
-     -  Eine komma-separierte Liste von Formularfeldern, die an cleverreach übermittelt werden soll. 
+	 - *emailfeld* - gibt das Feld im Formular an, das die E-Mail-Adresse enthält.
+	 - *0/1/actionfeld*	- Hier wird die durchzuführende Aktion gewählt ( 0 = Abmelden, 1 = Anmelden) 
+	    bzw. ein Feld im Formular angegeben, das die entsprechenden Werte liefert, also z.B. ein Radio Feld 
+	    zur Auswahl durch den Benutzer.
+     -  *anrede,titel,vorname,nachname,firma*
+        Eine komma-separierte Liste von Formularfeldern, die an cleverreach übermittelt werden soll. 
 
 
 Einstellungen:
