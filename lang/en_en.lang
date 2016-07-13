@@ -1,0 +1,27 @@
+# addon:lus_cleverreach en_en
+
+lus_cleverreach_title = cleverreach
+lus_cleverreach_config = Configuration
+lus_cleverreach_config_save = Save settings
+lus_cleverreach_config_saved = Settings were updated.
+lus_cleverreach_config_not_saved = Settings could not be saved!
+lus_cleverreach_apikey = cleverreach API Key
+lus_cleverreach_groupid = cleverreach group ID
+lus_cleverreach_formid = cleverreach form ID
+lus_cleverreach_source = cleverreach field 'source'
+lus_cleverreach_privacy = cleverreach privacy setting
+lus_cleverreach_privacyitem = cleverreach privat
+lus_cleverreach_info = Information
+lus_cleverreach_infotext = First enter cleverreach API key then save settings. After that group field will change into a selct field presenting all groups known by cleverreach. Once you save this selection you must selcet a form used for un- and subscribe and optionally fill in a value which will be passed to cleverreach as "source" for this entry.
+
+lus_cleverreach_api_success = API call successful
+lus_cleverreach_api_failure = API error
+lus_cleverreach_config_ok = Configuration saved
+lus_cleverreach_config_failure = Configuration error
+lus_cleverreach_select_apikey = enter API Key and save...
+lus_cleverreach_select_groupid = Select group
+lus_cleverreach_select_groupid_save = Select group and save...
+lus_cleverreach_groupid_failure = API error or no group exists
+lus_cleverreach_select_formid = Select Form
+lus_cleverreach_formid_failure = API error or no form exists
+lus_cleverreach_add_remove = Should the address be added or removed?

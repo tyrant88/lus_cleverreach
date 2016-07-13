@@ -1,0 +1,27 @@
+# addon:lus_cleverreach de_de
+
+lus_cleverreach_title = cleverreach
+lus_cleverreach_config = Einstellungen
+lus_cleverreach_config_save = Einstellungen speichern
+lus_cleverreach_config_saved = Einstellungen wurden aktualisiert.
+lus_cleverreach_config_not_saved = Einstellungen konnte nicht gespeichert werden!
+lus_cleverreach_apikey = cleverreach API Key
+lus_cleverreach_groupid = cleverreach Group ID
+lus_cleverreach_formid = cleverreach Form ID
+lus_cleverreach_source = cleverreach Feld 'Herkunft'
+lus_cleverreach_privacy = cleverreach Privacy Einstellung
+lus_cleverreach_privacyitem = cleverreach Privat
+lus_cleverreach_info = Information
+lus_cleverreach_infotext = Geben Sie zunächst den API-Schlüssel von cleverreach ein und speichern Sie die Einstellungen. Dann wird das Feld "Gruppe" zu einem Auswahlfeld, in dem alle cleverreach bekannten Gruppen stehen. Anschliessend müssen Sie noch ein Formular zur An- und Abmeldung auswählen und können einen Wert angeben, der in cleverreach als "Herkunft" des Eintrags notiert wird.
+
+lus_cleverreach_api_success = API Zugriff erfolgreich
+lus_cleverreach_api_failure = API Fehler
+lus_cleverreach_config_ok = Konfiguration gespeichert
+lus_cleverreach_config_failure = Konfiguration fehlerhaft
+lus_cleverreach_select_apikey = API Key eingeben und speichern...
+lus_cleverreach_select_groupid = Gruppe wählen
+lus_cleverreach_select_groupid_save = Gruppe wählen und speichern...
+lus_cleverreach_groupid_failure = API Fehler oder keine Gruppe vorhanden
+lus_cleverreach_select_formid = Formular wählen
+lus_cleverreach_formid_failure = API Fehler oder kein Formular vorhanden
+lus_cleverreach_add_remove = Soll An- oder Abgemeldet werden?

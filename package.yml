@@ -1,0 +1,19 @@
+package: lus_cleverreach
+version: '1.0'
+author: Laut und Schoen
+supportpage: lautundschoen.de/
+
+page:
+    title: 'translate:lus_cleverreach_title'
+    perm: lus_cleverreach[]
+    icon: rex-icon fa-envelope-o
+    subpages:
+        main:
+           title: 'translate:lus_cleverreach_config'
+           perm: 'admin[]'
+
+requires:
+    packages:
+        yform: '>=1.0-beta5'
+    redaxo: '>=5.1.0'
+
