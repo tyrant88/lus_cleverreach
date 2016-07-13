@@ -15,14 +15,16 @@ Mindestvoraussetzungen
 Verwendung
 ----------
 
-<pre style="font-size: 1.2em;">action|cr_recipient|emailfield|0/1/actionfield</pre>
+<pre>action|cr_recipient|emailfield|0/1/actionfield|anrede,titel,vorname,nachname,firma</pre>
 
 
 Parameter
 ----------
 
 	 - `emailfeld` - gibt das Feld im Formular an, das die E-Mail-Adresse enthält.
-	 - `0/1/actionfeld`	- Hier wird die durchzuführende Aktion gewählt ( 0 = Abmelden, 1 = Anmelden) bzw. ein Feld im Formular angegeben, das die entsprechenden Werte liefert. Z.B. ein Radio Feld zur Auswahl durch den Benutzer.
+	 - `0/1/actionfeld`	- Hier wird die durchzuführende Aktion gewählt ( 0 = Abmelden, 1 = Anmelden) 
+	    bzw. ein Feld im Formular angegeben, das die entsprechenden Werte liefert, also z.B. ein Radio Feld zur Auswahl durch den Benutzer.
+     -  Eine komma-separierte Liste von Formularfeldern, die an cleverreach übermittelt werden soll. 
 
 
 Einstellungen:
@@ -37,6 +39,8 @@ Das sind:
 		4. Ein Text, an dem man später erkennen kann, dass die Adressen über diese Website eingetragen wurden (optional)
 	
 
-Nach Eingabe des API-Schlüssels ( den Sie bei <a href="http://www.cleverreach.de/frontend/?rk=12968pvmjlnca" target="_blank">cleverreach</a> unter "Account --> Extras --> SOAP API mit Druck auf den Knopf "API Key erstellen" erzeugen können ) und einem Klick auf "aktualisieren", erscheint im Feld darunter eine Liste mit allen bei cleverreach angelegten Empfängergruppen.
-Wir diese Auswahl der Grupper wiederum gespeichert, erscheint im Feld darunter eine Liste mit allen bei cleverreach angelegten An- / Abmeldeformularen. Dies ist notwendig, da das Formular die Opt-in E-Mail erzeugt.
+Nach Eingabe des API-Schlüssels ( den Sie bei <a href="http://www.cleverreach.de/frontend/?rk=12968pvmjlnca" target="_blank">cleverreach</a> unter "Account --> Extras --> SOAP API mit Druck auf den Knopf "API Key erstellen" erzeugen können ) 
+und einem Klick auf "aktualisieren", erscheint im Feld darunter eine Liste mit allen bei cleverreach angelegten Empfängergruppen.
+Wir diese Auswahl der Grupper wiederum gespeichert, erscheint im Feld darunter eine Liste mit allen bei cleverreach angelegten An- / Abmeldeformularen. 
+Dies ist notwendig, da das Formular die Opt-in E-Mail erzeugt.
 	

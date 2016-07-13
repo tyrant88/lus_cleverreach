@@ -97,7 +97,7 @@ class rex_yform_action_cr_recipient extends rex_yform_action_abstract
 
     function getDescription()
     {
-        return 'cr_recipient -> Beispiel: action|cr_recipient|emailfield|0/1/actionfield|anrede,titel,vorname,nachname,firma :the list of fields to send as user profile';
+        return 'cr_recipient -> Beispiel: action|cr_recipient|emailfield|0/1/actionfield|anrede,titel,vorname,nachname,firma';
     }
 
 }
