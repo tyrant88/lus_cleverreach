@@ -1,16 +1,16 @@
-package: lus_cleverreach
-version: '1.1'
+# Alle hier gesetzten Werte können über $addon->getProperty($key) abgefragt werden
+
+package: lus_cleverreach  # Pflichtfeld
+version: '1.1'            # Pflichtfeld
 author: Laut und Schoen
-supportpage: lautundschoen.de/
+supportpage: https://github.com/tyrant88/lus_cleverreach
 
 page:
     title: 'translate:lus_cleverreach_title'
-    perm: lus_cleverreach[]
+    perm: admin[]
     icon: rex-icon fa-envelope-o
     subpages:
-        main:
-           title: 'translate:lus_cleverreach_config'
-           perm: 'admin[]'
+        main: { title: 'translate:lus_cleverreach_config' }
 
 requires:
     packages:
