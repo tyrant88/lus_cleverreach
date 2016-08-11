@@ -6,7 +6,8 @@ author: Laut und Schoen
 supportpage: https://github.com/tyrant88/lus_cleverreach
 
 page:
-    title: 'translate:lus_cleverreach_title'
+    #title: 'translate:lus_cleverreach_title'
+    title: 'translate:title'
     perm: admin[]
     icon: rex-icon fa-envelope-o
     subpages:
