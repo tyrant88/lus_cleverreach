@@ -1,6 +1,13 @@
 Changelog
 =========
 
+
+Version 1.1.5 – 08.12.2016
+--------------------------
+
+* Added PHP style usage description in readme
+
+
 Version 1.1.4 – 08.12.2016
 --------------------------
 
