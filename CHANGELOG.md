@@ -1,6 +1,11 @@
 Changelog
 =========
 
+Version 1.1.4 – 08.12.2016
+--------------------------
+
+* Added an error message parameter to the yform field
+
 Version 1.1.3 – 08.12.2016
 --------------------------
 

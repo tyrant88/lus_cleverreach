@@ -77,7 +77,7 @@ class rex_yform_action_cr_recipient extends rex_yform_action_abstract
                 //$errormsg = rex_i18n::msg('lus_cleverreach_api_success');
             } else {
                 $error = true;
-                if ($result->message != '') { $errormsg .= ': '. $result->message; }
+                if ( $result->message != '' ) { $errormsg .= ': '. $result->message; }
             }
         } elseif (!empty($email) && !$error) {
             $error == true;
@@ -85,6 +85,7 @@ class rex_yform_action_cr_recipient extends rex_yform_action_abstract
         }
 
         if ( $error == true ) {
+            if ( $this->getElement(5) != '' ) { $errormsg = $this->getElement(5); }
             $this->params['form_show'] = true;
             $this->params['hasWarnings'] = true;
             $this->params['warning_messages'][] = $errormsg;
@@ -98,7 +99,7 @@ class rex_yform_action_cr_recipient extends rex_yform_action_abstract
 
     function getDescription()
     {
-        return 'cr_recipient -> Beispiel: action|cr_recipient|emailfield|0/1/actionfield|anrede,titel,vorname,nachname,firma';
+        return 'cr_recipient -> Beispiel: action|cr_recipient|emailfield|0/1/actionfield|anrede,titel,vorname,nachname,firma|errormsg';
     }
 
 }
