@@ -2,6 +2,7 @@
 
 lus_cleverreach_title = cleverreach
 lus_cleverreach_config = Configuration
+lus_cleverreach_help = Help
 lus_cleverreach_config_save = Save settings
 lus_cleverreach_config_saved = Settings were updated.
 lus_cleverreach_config_not_saved = Settings could not be saved!

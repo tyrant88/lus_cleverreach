@@ -52,7 +52,7 @@ class CleverreachAPI
         return $this->api;
     }
 
-    public function CleverreachAPI($apikey = null)
+    public function __construct($apikey = null)
     {
         if (!empty($apikey)) {
             $this->setApikey(trim($apikey));
