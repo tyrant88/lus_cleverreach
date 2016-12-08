@@ -5,7 +5,7 @@
 class rex_yform_action_cr_recipient extends rex_yform_action_abstract
 {
 
-    function execute()
+    function executeAction()
     {
 
         $addon = rex_addon::get('lus_cleverreach');
@@ -61,7 +61,7 @@ class rex_yform_action_cr_recipient extends rex_yform_action_abstract
 
             // define fromid
             $api->setFormid($formid);
-            $errormsg = rex_i18n::translate('lus_cleverreach_api_failure');
+            $errormsg = rex_i18n::msg('lus_cleverreach_api_failure');
 
             if ($action == "1") {
                 // add resipient
@@ -70,18 +70,18 @@ class rex_yform_action_cr_recipient extends rex_yform_action_abstract
                 // remove resipient
                 $result = $api->removeRecipient($email);
             } else {
-                $errormsg = rex_i18n::translate('lus_cleverreach_add_remove');
+                $errormsg = rex_i18n::msg('lus_cleverreach_add_remove');
             }
 
             if ($result->status === 'SUCCESS') {
-                //$errormsg = rex_i18n::translate('lus_cleverreach_api_success');
+                //$errormsg = rex_i18n::msg('lus_cleverreach_api_success');
             } else {
                 $error = true;
                 if ($result->message != '') { $errormsg .= ': '. $result->message; }
             }
         } elseif (!empty($email) && !$error) {
             $error == true;
-            $errormsg = rex_i18n::translate('lus_cleverreach_config_failure');
+            $errormsg = rex_i18n::msg('lus_cleverreach_config_failure');
         }
 
         if ( $error == true ) {
