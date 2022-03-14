@@ -5,7 +5,7 @@
 class rex_yform_action_cr_recipient extends rex_yform_action_abstract
 {
 
-    function executeAction()
+    function executeAction() :void
     {
 
         $addon = rex_addon::get('lus_cleverreach');
@@ -91,9 +91,7 @@ class rex_yform_action_cr_recipient extends rex_yform_action_abstract
             $this->params['warning_messages'][] = $errormsg;
             $this->params['warning'][$this->getId()] = $this->params['error_class'];
             //$this->params['warning_messages'][$this->getId()] = $errormsg;
-            return false;
         }
-
 
     }
 

@@ -1,12 +1,9 @@
-# Alle hier gesetzten Werte können über $addon->getProperty($key) abgefragt werden
-
-package: lus_cleverreach  # Pflichtfeld
-version: '1.2.0'          # Pflichtfeld
+package: lus_cleverreach
+version: '1.2.1'
 author: Laut und Schoen
 supportpage: https://github.com/tyrant88/lus_cleverreach
 
 page:
-    #title: 'translate:lus_cleverreach_title'
     title: 'translate:title'
     perm: admin[]
     icon: rex-icon fa-envelope-o
