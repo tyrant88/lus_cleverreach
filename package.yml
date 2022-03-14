@@ -1,7 +1,7 @@
 # Alle hier gesetzten Werte können über $addon->getProperty($key) abgefragt werden
 
 package: lus_cleverreach  # Pflichtfeld
-version: '1.1.5'          # Pflichtfeld
+version: '1.2.0'          # Pflichtfeld
 author: Laut und Schoen
 supportpage: https://github.com/tyrant88/lus_cleverreach
 
@@ -16,6 +16,6 @@ page:
 
 requires:
     packages:
-        yform: '>=1.0-beta5'
-    redaxo: '>=5.1.0'
+        yform: '>=3.1'
+    redaxo: '>=5.6.0'
 

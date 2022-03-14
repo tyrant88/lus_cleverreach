@@ -9,8 +9,8 @@ Dazu benutzt man ein XFORM-Formular, in das man das von diesem Addon bereitgeste
 Mindestvoraussetzungen
 ----------------------
 
-* REDAXO 5.1
-* YFORM 1.0
+* REDAXO 5.6
+* YFORM 3.0
 
 Verwendung
 ----------
