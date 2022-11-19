@@ -32,6 +32,7 @@ if ( empty($apikey) ) {
 		$result = $api->getGroupList();
 		$selectgroupid->setSize(1);
 		$selectgroupid->setName('config[groupid]');
+        $selectgroupid->setAttribute('class', 'form-control');
 		if ( !empty($groupid) ) { $selectgroupid->setSelected($groupid); }
 
 		if ($result != false && $result->status == "SUCCESS") {
@@ -58,6 +59,7 @@ if (empty($groupid)) {
 			$result = $api->getFormsList($groupid);
 			$selectformid->setSize(1);
 			$selectformid->setName('config[formid]');
+            $selectformid->setAttribute('class', 'form-control');
 			if ( !empty($formid) ) {$selectformid->setSelected($formid); }
 
 			if ($result != false && $result->status == "SUCCESS") {
@@ -91,24 +93,24 @@ $formElements = [];
 
 $n = [];
 $n['label'] = '<label for="apikey">' . $this->i18n('lus_cleverreach_apikey') . '</label>';
-$n['field'] = '<input type="text" id="apikey" name="config[apikey]" size="40" value="' .$this->getConfig("apikey"). '" />';
+$n['field'] = '<input type="text" id="apikey" class="form-control" name="config[apikey]" size="40" value="' .$this->getConfig("apikey"). '" />';
 $formElements[] = $n;
 
 $n = [];
 $n['label'] = '<label for="groupid">' . $this->i18n('lus_cleverreach_groupid') . '</label>';
-//$n['field'] = '<input type="text" id="groupid" name="config[groupid]" value="' .$this->getConfig('groupid'). '" />';
+//$n['field'] = '<input type="text" id="groupid" class="form-control" name="config[groupid]" value="' .$this->getConfig('groupid'). '" />';
 $n['field'] = implode('<br />',$htmlgroup);
 $formElements[] = $n;
 
 $n = [];
 $n['label'] = '<label for="formid">' . $this->i18n('lus_cleverreach_formid') . '</label>';
-//$n['field'] = '<input type="text" id="formid" name="config[formid]" value="' . $this->getConfig('formid'). '" />';
+//$n['field'] = '<input type="text" id="formid" class="form-control" name="config[formid]" value="' . $this->getConfig('formid'). '" />';
 $n['field'] = implode("\n",$htmlform);
 $formElements[] = $n;
 
 $n = [];
 $n['label'] = '<label for="source">' . $this->i18n('lus_cleverreach_source') . '</label>';
-$n['field'] = '<input type="text" id="source" name="config[source]" size="40" value="' .$this->getConfig('source'). '" />';
+$n['field'] = '<input type="text" id="source" class="form-control" name="config[source]" size="40" value="' .$this->getConfig('source'). '" />';
 $formElements[] = $n;
 
 $fragment = new rex_fragment();

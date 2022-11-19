@@ -21,8 +21,9 @@ class rex_yform_action_cr_recipient extends rex_yform_action_abstract
 
         $error = false;
         $errormsg = '';
-        // get post data
+        if ( $this->getElement(5) != '' ) { $errormsg = $this->getElement(5); }
 
+        // get post data
         foreach ($this->params['value_pool']['sql'] as $key => $value) {
             if ($this->getElement(2) == $key) {
                 $email = $this->params['value_pool']['sql'][$key];
@@ -40,6 +41,17 @@ class rex_yform_action_cr_recipient extends rex_yform_action_abstract
             }
         }
 
+        $agreed = true; dump($this->getElement(6));
+        if ($this->getElement(6) != '') {
+            $checkboxfield = $this->getElement(6);
+            $agreed = false;
+            foreach ($this->params['value_pool']['email'] as $key => $value) {
+                if ( $checkboxfield == $key ) {dump($value);
+                    if ($value == 1) { $agreed = true; };
+                }
+            }
+        }
+
         $attributes = array();
         if ($this->getElement(4) != '') {
             $fields = explode( ',',$this->getElement(4));
@@ -51,7 +63,7 @@ class rex_yform_action_cr_recipient extends rex_yform_action_abstract
             }
         }
 
-        if (!empty($email) && !empty($apikey) && !empty($groupid) && !empty($formid) && !$error) {
+        if (!empty($email) && !empty($apikey) && !empty($groupid) && !empty($formid) && !$error && $agreed ) {
 
             // create Cleverreach API object
             $api = new CleverreachAPI($apikey);
@@ -64,10 +76,10 @@ class rex_yform_action_cr_recipient extends rex_yform_action_abstract
             $errormsg = rex_i18n::msg('lus_cleverreach_api_failure');
 
             if ($action == "1") {
-                // add resipient
+                // add recipient
                 $result = $api->addRecipient($email, $source, $attributes);
             } elseif ($action == "0" ) {
-                // remove resipient
+                // remove recipient
                 $result = $api->removeRecipient($email);
             } else {
                 $errormsg = rex_i18n::msg('lus_cleverreach_add_remove');
@@ -79,27 +91,23 @@ class rex_yform_action_cr_recipient extends rex_yform_action_abstract
                 $error = true;
                 if ( $result->message != '' ) { $errormsg .= ': '. $result->message; }
             }
-        } elseif (!empty($email) && !$error) {
+        } elseif (!empty($email) && $agreed && !$error) {
             $error == true;
             $errormsg = rex_i18n::msg('lus_cleverreach_config_failure');
         }
 
-        if ( $error == true ) {
-            if ( $this->getElement(5) != '' ) { $errormsg = $this->getElement(5); }
+        if ( $error == true || empty($email)) {
             $this->params['form_show'] = true;
             $this->params['hasWarnings'] = true;
             $this->params['warning_messages'][] = $errormsg;
             $this->params['warning'][$this->getId()] = $this->params['error_class'];
-            //$this->params['warning_messages'][$this->getId()] = $errormsg;
         }
 
     }
 
     function getDescription() :string
     {
-        return 'cr_recipient -> Beispiel: action|cr_recipient|emailfield|0/1/actionfield|anrede,titel,vorname,nachname,firma|errormsg';
+        return 'cr_recipient -> Beispiel: action|cr_recipient|emailfield|0/1/actionfield|anrede,titel,vorname,nachname,firma|errormsg|checkboxfeld';
     }
 
 }
-
-?>

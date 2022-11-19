@@ -31,6 +31,7 @@ zur Auswahl durch den Benutzer.
 * `anrede,titel,vorname,nachname,firma`
 Eine komma-separierte Liste von Formularfeldern, die an cleverreach übermittelt werden soll.
 * `errormsg` - Hier können die Fehlermeldungen der **cleverreach-API** mit einer Endnutzerfreundlichen Variante überschrieben werden
+* `checkboxfeld` - optional ein Checkbox-Feld, das die Zustimmung zum Newsletter enthält. Wenn angegeben, wird die Aktion nur ausgeführt, wenn die checkbox den Wert 1 hat
 
 
 Einstellungen:
